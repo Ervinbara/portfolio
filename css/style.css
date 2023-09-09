@@ -1,0 +1,227 @@
+/* Styles pour la barre de navigation */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Mode nuit : TODO : à terminer*/
+/* body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode button#toggle-mode {
+  background-color: #000000;
+  color: #333;
+} */
+
+/*Logo photo*/
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .heading-primary{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #111;
+    font-weight: 800;
+  }
+  .name {
+    font-size: 1.2em;
+    color: #fff;
+  }
+
+  .name:hover{
+    cursor: pointer;
+  }
+  
+
+  
+  .menu ul li a, .name {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: color .3s;
+  }
+
+  .menu ul li a:hover,.name:hover {
+    color: #000000; /* Violet foncé */
+    transition: color 0.3s;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+  }
+
+  /*Fin de styles banner*/
+  
+  .text-container {
+    max-width: 600px;
+    margin: auto;
+    z-index: 3;
+  }
+  
+  .intro {
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+    font-weight: bold; /* Ajout de la propriété font-weight */
+}
+
+  
+  .projects-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 55px;
+    background-color: #569c40;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease-out; /* Ajustement de la transition */
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+  }
+  
+  .projects-btn:hover {
+    background-color: #038225;
+    transform: translateY(-2px);
+  }
+  
+
+  /****** Section à propos ******/
+  .about {
+    text-align: center;
+    background-color: #fff; /* Couleur du fond */
+    padding: 100px 20px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.presentation {
+    margin-bottom: 30px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Espacement entre les deux colonnes */
+  text-align: center;
+  background-color: #fff; /* Couleur de fond */
+  padding: 50px 20px;
+}
+
+.content-main,
+.content-skills {
+  background-color: #f0f0f0; /* Couleur de fond */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  z-index: 3;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.content-details-sentence {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.content-skills {
+  text-align: center;
+}
+
+.skill-logo {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.skill-logo img {
+  width: 100px; /* Ajustez la taille selon vos besoins */
+  height: 100px; /* Ajustez la taille selon vos besoins */
+  padding: 10px;
+  box-shadow: 0px 15px 10px -15px #111;   
+  
+}
+
+/*Plusieurs animations pour le survol des skills */
+
+/* Déplacement vers le haut: L'image peut légèrement monter vers le haut au survol. */
+/* .skill-logo:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+} */
+
+/* Ombre portée: Une ombre peut apparaître autour de l'image au survol. */
+/* .skill-logo:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+} */
+
+/* Opacité: L'opacité de l'image peut changer au survol. */
+/* .skill-logo:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+} */
+
+/*Scale (Agrandissement/Réduction): L'image peut légèrement s'agrandir au survol pour donner un effet dynamique.*/
+/* .skill-logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+} */
+
+.skill-logo:hover {
+  transform: rotate(360deg);
+}
+
+hr {
+  border:none;
+  height: 20px;
+  width: 90%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #1f1209;
+  box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px; 
+}
+

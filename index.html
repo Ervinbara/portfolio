@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+
+    <!-- Fichier css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <div class="logo-container">
+                <div class="circle">
+                    <img src="images/photo/photo.png" alt="Ma Photo">
+                </div>
+                <div data-value="BARA ERVIN" class="name">BARA ERVIN</div>
+            </div>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <div class="circle">
+                        <img src="images/photo/photo.png" alt="Ma Photo">
+                    </div>
+                    <div data-value="BARA ERVIN" class="name">BARA ERVIN</div>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#accueil" class="icon smooth-scroll">Home</a></li>
+                    <li><a href="#a-propos" class="icon smooth-scroll">About</a></li>
+                    <li><a href="#timeline" class="icon smooth-scroll">Timeline</a></li>
+                    <li><a href="#projets" class="icon smooth-scroll">Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light mode-toggle">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil" class="banner">
+        <div class="social-background"></div>
+            <div class="social-icons">
+                <a href="https://github.com/Ervinbara" target="_blank"><i class="fab fa-github fa-xl"></i></a>
+                <a href="https://www.linkedin.com/in/ervin-bara-02bb90141/" target="_blank"><i class="fab fa-linkedin fa-xl"></i></a>
+                <a href="mailto:ervinbara17@gmail.com"><i class="fas fa-envelope fa-xl"></i></a>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1 class="heading-primary">Hey, welcome to my portfolio</h1>
+            <p class="intro"></p>
+            <a href="#projets" class="projects-btn icon smooth-scroll">PROJETS</a>
+        </div>
+        <div class="scroll-indicator">
+            <a class="icon smooth-scroll" href="#a-propos"><span></span></a>
+        </div>
+    </section>
+    
+    <section id="a-propos" class="about">
+        <div class="presentation">
+            <!-- Partie Présentation -->
+            <h2>ABOUT ME</h2>
+            <hr class="hr-dotted">
+        </div>
+        
+        <div class="about-content">
+            <div class="content-main">
+                <!-- Partie about & skills -->
+                <h3 class="content-title">En quelques mots</h3>
+                <div class="content-details">
+                    <p class="content-details-sentence">Fondamentalement orienté vers le <strong>développement backend</strong>, j'ai également eu l'occasion d'explorer et de développer mes compétences en <strong>frontend</strong>.</p>
+                    <p class="content-details-sentence">J'apprécie les différents aspects du <strong>développement web</strong>, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend.</p>
+                    <p class="content-details-sentence">Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une <strong>vision complète et équilibrée</strong>.</p>
+                </div>                
+            </div>
+
+            <div class="content-skills">
+                <h3 class="content-title">Compétences</h3>
+                    <div class="skill-logo" data-skill="PHP">
+                        <img src="images/skills/php.svg" alt="PHP">
+                    </div>
+                    <div class="skill-logo" data-skill="Symfony">
+                        <img src="images/skills/symfony.svg" alt="Symfony">
+                    </div>
+                    <div class="skill-logo" data-skill="Javascript">
+                        <img src="images/skills/javascript.svg" alt="Javascript">
+                    </div>
+                    <div class="skill-logo" data-skill="html">
+                        <img src="images/skills/html.svg" alt="html">
+                    </div>
+                    <div class="skill-logo" data-skill="css">
+                        <img src="images/skills/css.svg" alt="css">
+                    </div>
+                    <div class="skill-logo" data-skill="python">
+                        <img src="images/skills/python.svg" alt="python">
+                    </div>
+                    <div class="skill-logo" data-skill="bootstrap">
+                        <img src="images/skills/bootstrap.svg" alt="bootstrap">
+                    </div>
+                    <div class="skill-logo" data-skill="mysql">
+                        <img src="images/skills/mysql.svg" alt="mysql">
+                    </div>
+                    <div class="skill-logo" data-skill="responsive">
+                        <img src="images/skills/responsive.svg" alt="responsive design">
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="timeline" class="timeline">
+        <!-- <h2 class="timeline-title">TIMELINE</h2> -->
+        
+        <ul>
+          <li>
+            <div>
+              <time>2023</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2021</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2019</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2018</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>1998</time> Naissance de Brahim
+            </div>
+          </li>
+        </ul>
+      </section>
+        
+        <!-- Ajoutez autant d'éléments que nécessaire -->
+    </section>
+    
+    
+
+    <section id="projets" class="projects">
+        <!-- Liste de projets -->
+    </section>
+    
+    <section id="contact" class="contact">
+        <!-- Votre formulaire de contact -->
+    </section>
+
+    <script src="js/style.js"></script>
+    <script src="js/night-mode.js"></script>
+    <script src="js/slide-skills.js"></script>
+    <script src="js/nav-responsive.js"></script>
+    <script src="js/smooth-ancre-scroll.js"></script>
+    <script src="js/timeline.js"></script>
+    
+</body>
+</html>
