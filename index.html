@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/projets.css">
     <link rel="stylesheet" href="css/timeline.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,6 +120,9 @@
                     <div class="skill-logo" data-skill="mysql">
                         <img src="images/skills/mysql.svg" alt="mysql">
                     </div>
+                    <div class="skill-logo" data-skill="github">
+                        <img src="images/skills/github.svg" alt="github">
+                    </div>
                     <div class="skill-logo" data-skill="responsive">
                         <img src="images/skills/responsive.svg" alt="responsive design">
                     </div>
@@ -126,57 +130,98 @@
         </div>
     </section>
     
-    <section id="timeline" class="timeline">
-        <!-- <h2 class="timeline-title">TIMELINE</h2> -->
-        
-        <ul>
-          <li>
-            <div>
-              <time>2023</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2021</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2019</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2018</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>1998</time> Naissance de Brahim
-            </div>
-          </li>
-        </ul>
-      </section>
-        
-        <!-- Ajoutez autant d'éléments que nécessaire -->
+    <section id="timeline">
+        <div class="presentation">
+            <!-- Partie Présentation -->
+            <h2>TIMELINE</h2>
+            <hr class="hr-dotted">
+        </div>
+        <div class="timeline">
+            <!-- <div class="timeline-fill"></div> -->
+            <ul>
+              <li>
+                <div class="content content-left">
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <div class="time content-right">
+                  <h4>January 2018</h4>
+                </div>
+              </li>
+              
+              <li>
+                <div class="content content-right">
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <div class="time content-left">
+                  <h4>February 2018</h4>
+                </div>
+              </li>
+              
+              <li>
+                <div class="content content-left">
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <div class="time content-right">
+                  <h4>March 2018</h4>
+                </div>
+              </li>
+              
+              <li>
+                <div class="content content-right">
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <div class="time content-left">
+                  <h4>April 2018</h4>
+                </div>
+              </li>
+              
+              <div style="clear:both;"></div>
+            </ul>
+          </div>
     </section>
     
     
-
     <section id="projets" class="projects">
-        <!-- Liste de projets -->
+        <div class="presentation">
+            <!-- Partie Présentation -->
+            <h2>PROJECTS</h2>
+            <hr class="hr-dotted">
+        </div>
+        <div class="projets-categories">
+            <button class="categorie active" data-categorie="all">ALL</button>
+            <button class="categorie" data-categorie="php">PHP</button>
+            <button class="categorie" data-categorie="symfony">Symfony</button>
+            <button class="categorie" data-categorie="html-css-js">HTML/CSS/JS</button>
+            <button class="categorie" data-categorie="wordpress">WordPress</button>
+        </div>
+        <div class="projets-liste projets-liste-3">
+            <!-- Projets vont s'afficher ici -->
+        </div>
     </section>
     
     <section id="contact" class="contact">
         <!-- Votre formulaire de contact -->
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/style.js"></script>
     <script src="js/night-mode.js"></script>
     <script src="js/slide-skills.js"></script>
     <script src="js/nav-responsive.js"></script>
     <script src="js/smooth-ancre-scroll.js"></script>
     <script src="js/timeline.js"></script>
+    <script src="js/nav-scroll.js"></script>
+    <script src="js/projets.js"></script>
     
 </body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Contenu du footer -->
+    </div>
+</footer>
 </html>

@@ -9,8 +9,8 @@
 
 /* ===== Colours ===== */
 :root{
-    --body-color: #E4E9F7;
-    --nav-color: #4070F4;
+    /* --body-color: #E4E9F7; */
+    /* --nav-color: #4070F4; */
     --side-nav: #010718;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
@@ -36,21 +36,39 @@ nav{
     left: 0;
     height: 70px;
     width: 100%;
-    background-color: var(--nav-color);
+    /* background-color: var(--nav-color); */
     z-index: 100;
 }
 
-body.dark nav{
+/* Ajoutez ces styles pour la nav lorsque scrollée */
+.nav-scrolled {
+    background: #092756;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%, rgba(138,114,76,0) 40%), -moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%, rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%, rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%, rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: radial-gradient(ellipse at 0% 100%, rgba(104,128,138,.4) 10%, rgba(138,114,76,0) 40%), linear-gradient(to top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), linear-gradient(-45deg, #670d10 0%, #092756 100%);
+
+    backdrop-filter: blur(10px); /* Effet de flou pour un aspect de verre givré */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour démarcation */
+}
+
+/* Ajoutez une transition pour un effet en douceur */
+nav {
+    transition: background-color 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px); /* Effet de flou pour un aspect de verre givré */
+}
+
+
+/* body.dark nav{
     border: 1px solid #393838;
 
-}
+} */
 
 nav .nav-bar{
     position: relative;
     height: 100%;
-    /* max-width: 1175px; */
     width: 100%;
-    background-color: var(--nav-color);
     margin: 0 auto;
     padding: 0 30px;
     display: flex;
@@ -253,7 +271,7 @@ body.dark .search-field i{
 
     .menu{
         position: fixed;
-        height: 100%;
+        height: 1250px;
         width: 320px;
         left: -100%;
         top: 0;

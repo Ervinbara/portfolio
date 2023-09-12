@@ -1,0 +1,135 @@
+.projects {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.projets-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.categorie {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.projet {
+  position: relative;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.projet:hover {
+  transform: translateY(-5px);
+}
+
+.projet img {
+  width: 100%;
+  height: auto;
+}
+
+.projet .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projet:hover .description {
+  opacity: 1;
+}
+
+.langages {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.langages span {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.projets-categories button{
+  z-index: 10;
+}
+
+.projets-liste {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.projets-liste-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.projets-liste-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.projets-liste-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .projets-liste {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projets-liste {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.projet {
+  /* ... Vos autres styles ... */
+  border: none; /* Suppression de la bordure */
+  border-radius: 10px; /* Ajout de l'effet arrondi */
+}
+
+.categorie.active {
+  border: 2px solid #100c0c; /* Ajoutez la bordure à la catégorie sélectionnée */
+}
+
+.categorie:not(.active) {
+  border: none; /* Retirez la bordure des catégories non sélectionnées */
+}
+
+.projet {
+  /* ... Vos autres styles ... */
+  opacity: 0;
+  transform: translateY(20px); /* Ajout de la transformation vers le bas */
+  animation: appear 0.5s ease-out forwards; /* Ajout de l'animation */
+}
+
+.projet.show {
+  opacity: 1; /* Lorsque la classe 'show' est ajoutée, l'opacité devient 1 */
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* La transformation finale, position originale */
+  }
+}
