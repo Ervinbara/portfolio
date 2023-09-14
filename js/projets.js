@@ -21,12 +21,12 @@ function ajusterStyleProjets() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const projets = [
-        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', description: 'Description du projet 1', langages: ['PHP', 'MySQL'] },
-        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', description: 'Description du projet 1', langages: ['PHP', 'MySQL'] },
-        { categorie: ['symfony', 'all'], image: 'images/projets/todo.jpg', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
-        { categorie: ['symfony', 'all'], image: 'images/projets/fullbail.jpg', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
-        { categorie: ['html-css-js', 'all'], image: 'images/projets/velo.jpg', description: 'Description du projet 2', langages: ['HTML', 'CSS', 'Javascript'] },
-        { categorie: ['wordpress', 'all'], image: 'images/projets/chalet.jpg', description: 'Description du projet 2', langages: ['Wordpress', 'Doctrine'] },
+        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'], about: 'Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.' },
+        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'] },
+        { categorie: ['symfony', 'all'], image: 'images/projets/todo.jpg', titre:'ToDo List', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
+        { categorie: ['symfony', 'all'], image: 'images/projets/fullbail.jpg', titre:'Blog/social', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
+        { categorie: ['html-css-js', 'all'], image: 'images/projets/velo.jpg',titre:'Location de vélo', description: 'Description du projet 2', langages: ['HTML', 'CSS', 'Javascript'] },
+        { categorie: ['wordpress', 'all'], image: 'images/projets/chalet.jpg',titre:'Chalet et Caviar',  description: 'Description du projet 2', langages: ['Wordpress', 'Doctrine'] },
     ];
 
     function preloadImages(images) {
@@ -64,10 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
             projetElement.innerHTML = `
                 <img src="${projet.image}" alt="Projet">
                 <div class="description">
-                    <h3>${projet.description}</h3>
+                    <h3>${projet.titre}</h3>
                     <div class="langages">
                         ${projet.langages.map(langage => `<span>${langage}</span>`).join('')}
                     </div>
+                    <button class="more-btn">More</button> <!-- Ajout du bouton "More" -->
                 </div>
             `;
 
@@ -103,4 +104,78 @@ document.addEventListener('DOMContentLoaded', function() {
     // Afficher tous les projets au début
     afficherProjets(['all']);
     ajusterStyleProjets();
+    
+    // Écouter le clic sur le bouton "More" pour afficher la barre latérale
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('more-btn')) {
+            const projetElement = event.target.closest('.projet');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.overlay');
+            const projetTitre = projetElement.querySelector('h3').textContent;
+            
+            const projetSelectionne = projets.find(projet => projet.titre === projetTitre);
+            if (projetSelectionne) {
+                sidebar.querySelector('h3').textContent = projetTitre;
+                sidebar.querySelector('.more-about-descriptif').textContent = projetSelectionne.description;
+                sidebar.querySelector('.more-about-content').textContent = projetSelectionne.about;
+                sidebar.querySelector('.more-about-image').src = projetSelectionne.image;
+                sidebar.classList.add('show');
+                overlay.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                document.querySelectorAll('.categorie, .smooth-scroll').forEach(element => {
+                    element.style.pointerEvents = 'none';
+                });
+            }
+        }
+    });
+    
+    
+
+    // Sélectionnez tous les éléments avec la classe 'close-btn' et 'close-btn-text'
+    const elements = document.querySelectorAll('.close-btn, .close-btn-text');
+
+    // Ajoutez un événement de clic à chaque élément
+    elements.forEach(element => {
+        element.addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('show');
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelectorAll('.categorie, .smooth-scroll').forEach(element => {
+                element.style.pointerEvents = 'auto';
+            });
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+
+    document.querySelector('.overlay').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.remove('show');
+        this.style.display = 'none';
+        document.querySelectorAll('.categorie, .smooth-scroll').forEach(element => {
+            element.style.pointerEvents = 'auto';
+        });
+        document.body.style.overflow = 'auto';
+    });
+
+    document.querySelector('.return-btn').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.remove('show');
+        document.querySelector('.overlay').style.display = 'none';
+        document.querySelectorAll('.categorie, .smooth-scroll').forEach(element => {
+            element.style.pointerEvents = 'auto';
+        });
+        document.body.style.overflow = 'auto';
+    });
+
+    document.addEventListener('click', function(event) {
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+        if (!event.target.closest('.sidebar') && !event.target.classList.contains('more-btn')) {
+            sidebar.classList.remove('show');
+            overlay.style.display = 'none';
+            document.querySelectorAll('.categorie, .smooth-scroll').forEach(element => {
+                element.style.pointerEvents = 'auto';
+            });
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
 });

@@ -31,6 +31,7 @@
 .projet img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .projet .description {
@@ -38,7 +39,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 98%;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   text-align: center;
@@ -48,10 +49,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .projet:hover .description {
   opacity: 1;
+  border-radius: 10px;
 }
 
 .langages {
@@ -132,4 +135,188 @@
     opacity: 1;
     transform: translateY(0); /* La transformation finale, position originale */
   }
+}
+
+
+/*projet-more*/
+/* CSS pour la barre latérale */
+.section-close-btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-btn-text{
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Cachez la barre latérale initialement */
+  height: 100%;
+  width: 300px;
+  /* background-color: #020a13; */
+  background: #092756;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar.show {
+  right: 0; /* Affichez la barre latérale lorsqu'elle a la classe 'show' */
+}
+
+.close-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.close-btn:hover {
+  background: #c0392b;
+}
+
+/* Adaptation mobile projets */
+
+@media (max-width: 992px) {
+  .projets-liste-3 {
+    grid-template-columns: repeat(2, 1fr)!important;
+  }
+}
+
+@media (max-width: 600px) {
+  .projets-liste-2,
+  .projets-liste-3 {
+    grid-template-columns: repeat(1, 1fr)!important;
+  }
+
+  .projets-categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categorie {
+    margin: 5px;
+  }
+}
+
+
+/*Section more*/
+.sidebar{
+  z-index: 1002;
+}
+.projet .more-btn {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.projet:hover .more-btn {
+  display: block;
+}
+
+/*Overlay during more open*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente */
+  display: none; /* Initialement caché */
+  z-index: 1001; /* Placez-le au-dessus de tout le reste */
+}
+
+
+.overlay.show {
+  display: block;
+}
+
+
+.sidebar.show {
+  width: 30%;
+}
+
+.sidebar h3 {
+  font-size: 1.5em;
+}
+
+.sidebar p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.sidebar img {
+  display: block;
+  margin: 10px auto;
+}
+
+.sidebar .return-btn {
+  cursor: pointer;
+  color: #007bff; /* Couleur du lien */
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.sidebar .links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar .links a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff; /* Couleur du fond du lien */
+  color: #fff; /* Couleur du texte du lien */
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.sidebar .links a:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767px) {
+  .sidebar.show {
+    width: 100%;
+  }
+}
+
+.more-about-image {
+  max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
+  height: auto; /* L'image gardera son ratio hauteur/largeur */
+  border-radius: 10px;
+}
+
+.close-btn-text{
+  opacity: 0.8;
+}
+
+
+.close-btn-text:hover {
+  text-decoration: underline;
+  color: #FAEBD7;
+}
+
+.more-about-content,.more-about-descriptif, .more-about-title,.close-btn-text {
+  color: #FAEBD7 ;
 }

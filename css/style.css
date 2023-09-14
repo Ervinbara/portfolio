@@ -12,6 +12,10 @@ body{
     */
 }
 
+h2{
+  position: relative;
+  color: #FAEBD7;
+}
 /* Mode nuit : TODO : à terminer*/
 /* body.dark-mode {
   background-color: #333;
@@ -153,7 +157,6 @@ body{
   /****** Section à propos ******/
   .about {
     text-align: center;
-    /* background-color: #fff;  */
     padding: 100px 20px;
 }
 
@@ -248,12 +251,13 @@ body{
 }
 
 hr {
+  position: relative;
   border:none;
   height: 20px;
   width: 15%;
   height: 50px;
   margin-top: 0;
-  border-bottom: 1px solid #1f1209;
+  border-bottom: 1px solid #857e7a;
   box-shadow: 0 20px 20px -20px #333;
   margin: -50px auto 10px; 
 }
@@ -271,3 +275,6 @@ hr {
   text-align: center; /* Centrer le contenu */
   height: 30vh;
 }
+
+
+
