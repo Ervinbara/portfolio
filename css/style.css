@@ -262,19 +262,69 @@ hr {
   margin: -50px auto 10px; 
 }
 
-
+/*Section footer*/
 
 .footer {
-  background: #092756;
-  background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
-  background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
-  background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+  position: relative;
+  z-index: 2;
   color: #fff; /* Couleur du texte */
   padding: 20px; /* Marge intérieure */
   text-align: center; /* Centrer le contenu */
-  height: 30vh;
+  height: 40vh;
 }
 
 
+.creator-text{
+  position: relative;
+  bottom: -150px;
+  font-size: 14px!important;
+}
 
+
+.footer {
+  color: #fff; /* Couleur du texte */
+  padding: 30px;
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.creator-text {
+  font-size: 16px;
+}
+
+a[href^="mailto"] {
+  position: relative;
+  color: #ffffff; /* Choisir la couleur de votre choix */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a[href^="mailto"]::before {
+  content: "\f0e0"; /* Code de l'icône enveloppe (Font Awesome) */
+  font-family: "Font Awesome 5 Free";
+  margin-right: 5px;
+  transition: transform 0.3s;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+}
+
+a[href^="mailto"]:hover::before {
+  transform: translate(-50%, -50%) rotate(360deg);
+}

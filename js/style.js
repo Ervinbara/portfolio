@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Effet d'écriture pour l'introduction
     const introText = document.querySelector('.intro');
-    const text = "Backend Developer";
+    const text = "Fullstack Developer";
     let index = 0;
   
     function type() {

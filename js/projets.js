@@ -21,12 +21,12 @@ function ajusterStyleProjets() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const projets = [
-        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'], about: 'Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.' },
-        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'] },
-        { categorie: ['symfony', 'all'], image: 'images/projets/todo.jpg', titre:'ToDo List', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
-        { categorie: ['symfony', 'all'], image: 'images/projets/fullbail.jpg', titre:'Blog/social', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
-        { categorie: ['html-css-js', 'all'], image: 'images/projets/velo.jpg',titre:'Location de vélo', description: 'Description du projet 2', langages: ['HTML', 'CSS', 'Javascript'] },
-        { categorie: ['wordpress', 'all'], image: 'images/projets/chalet.jpg',titre:'Chalet et Caviar',  description: 'Description du projet 2', langages: ['Wordpress', 'Doctrine'] },
+        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', website:'http://convertisseur-crypto.com/', github:'https://github.com/Ervinbara/BitVin', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'], about: 'Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.' },
+        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', website:'', github:'', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'] },
+        { categorie: ['symfony', 'all'], image: 'images/projets/todo.jpg', website:'', github:'', titre:'ToDo List', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
+        { categorie: ['symfony', 'all'], image: 'images/projets/bitcoin.jpg', website:'', github:'', titre:'Blog/social', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
+        { categorie: ['html-css-js', 'all'], image: 'images/projets/bitcoin.jpg', website:'', github:'', titre:'Location de vélo', description: 'Description du projet 2', langages: ['HTML', 'CSS', 'Javascript'] },
+        { categorie: ['wordpress', 'all'], image: 'images/projets/chalet.jpg', website:'', github:'', titre:'Chalet et Caviar',  description: 'Description du projet 2', langages: ['Wordpress', 'Doctrine'] },
     ];
 
     function preloadImages(images) {
@@ -112,13 +112,60 @@ document.addEventListener('DOMContentLoaded', function() {
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.querySelector('.overlay');
             const projetTitre = projetElement.querySelector('h3').textContent;
-            
+    
             const projetSelectionne = projets.find(projet => projet.titre === projetTitre);
             if (projetSelectionne) {
                 sidebar.querySelector('h3').textContent = projetTitre;
                 sidebar.querySelector('.more-about-descriptif').textContent = projetSelectionne.description;
                 sidebar.querySelector('.more-about-content').textContent = projetSelectionne.about;
                 sidebar.querySelector('.more-about-image').src = projetSelectionne.image;
+    
+                // Récupérer la liste des technologies
+                const technologiesList = sidebar.querySelector('.technologies-list');
+                technologiesList.innerHTML = ''; // Effacer les anciennes technologies
+    
+                projetSelectionne.langages.forEach(langage => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = langage;
+                    technologiesList.appendChild(listItem);
+                });
+
+                // Récupération des liens vers le site/github
+                const socialLinkSection = document.querySelector('.section-social-link');
+                socialLinkSection.innerHTML = ''; // Supprime le contenu précédent
+
+                if (projetSelectionne.website) {
+                    const websiteLink = document.createElement('a');
+                    websiteLink.href = projetSelectionne.website;
+                    websiteLink.target = '_blank';
+                    websiteLink.classList.add('website'); // Ajoute la classe 'website'
+                
+                    const websiteIcon = document.createElement('i');
+                    websiteIcon.classList.add('fa-solid', 'fa-globe'); // Ajoute les classes pour l'icône globe
+                
+                    websiteLink.appendChild(websiteIcon); // Ajoute l'icône au lien
+                    websiteLink.appendChild(document.createTextNode(' Voir le site')); // Ajoute le texte du lien
+                
+                    socialLinkSection.appendChild(websiteLink);
+                }
+                
+                if (projetSelectionne.github) {
+                    const githubLink = document.createElement('a');
+                    githubLink.href = projetSelectionne.github;
+                    githubLink.target = '_blank';
+                    githubLink.classList.add('github'); // Ajoute la classe 'github'
+                
+                    const githubIcon = document.createElement('i');
+                    githubIcon.classList.add('fab', 'fa-github'); // Ajoute les classes pour l'icône GitHub
+                
+                    githubLink.appendChild(githubIcon); // Ajoute l'icône au lien
+                    githubLink.appendChild(document.createTextNode(' Voir sur GitHub')); // Ajoute le texte du lien
+                
+                    socialLinkSection.appendChild(githubLink);
+                }
+                
+                
+    
                 sidebar.classList.add('show');
                 overlay.style.display = 'block';
                 document.body.style.overflow = 'hidden';
@@ -128,6 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+    
     
     
 
