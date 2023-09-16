@@ -5,9 +5,12 @@ function triggerAnimation(elements, animationClass) {
 
         if (elementPosition < screenPosition) {
             element.classList.add(animationClass);
+            element.parentElement.classList.add('active-border'); // Ajout de la classe 'active-border'
         }
     });
 }
+
+
 
 const contentElements = document.querySelectorAll('.content');
 const timeElements = document.querySelectorAll('.time');

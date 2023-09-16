@@ -5,13 +5,16 @@
 #timeline .presentation {
 	text-align: center;
 }
-
+.timeline p{
+	color: #FAEBD7;
+}
 .timeline{
 	position:relative;
 	margin:50px auto;
 	padding:40px 0;
 	width:1000px;
 	box-sizing:border-box;
+	
   }
   .timeline:before{
 	content:'';
@@ -25,16 +28,28 @@
 	padding:0;
 	margin:0;
   }
-  .timeline ul li{
-	list-style:none;
-	position:relative;
-	width:50%;
-	padding:20px 40px;
-	box-sizing:border-box;
-  }
+  .timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent; /* Ajout d'un bord transparent par défaut */
+    transition: border-color 0.5s ease; /* Transition sur la couleur du bord */
+}
+
+@media (min-width: 768px) {
+    .timeline ul li.active-border {
+        transition: border-color 0.5s ease; /* Transition sur la couleur du bord */
+        border-bottom-color: #c5c5c5; /* Couleur du bord lorsque l'élément est actif */
+    }
+}
+
+
+
   .timeline ul li:nth-child(odd){
 	float:left;
-	text-align:right;
+	text-align:left;
 	clear:both;
   }
   .timeline ul li:nth-child(even){
@@ -72,7 +87,7 @@
   .timeline ul li h3{
 	padding:0;
 	margin:0;
-	color:rgb(78, 14, 35);
+    color: rgb(248 168 194);
 	font-weight:600;
   }
   .timeline ul li p{
@@ -84,6 +99,8 @@
 	padding:0;
 	font-size:14px;
   }
+  
+
   .timeline ul li:nth-child(odd) .time
   {
 	position:absolute;

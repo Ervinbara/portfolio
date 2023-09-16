@@ -21,7 +21,7 @@ function ajusterStyleProjets() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const projets = [
-        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', website:'http://convertisseur-crypto.com/', github:'https://github.com/Ervinbara/BitVin', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'], about: 'Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.' },
+        { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', website:'http://convertisseur-crypto.com/', github:'https://github.com/Ervinbara/BitVin', titre:'Convertisseur cryptos', description: 'Site de conversion et d\'analyse de cryptomonnaie', langages: ['PHP', 'MySQL'], about: 'Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.' },
         { categorie: ['php', 'all'], image: 'images/projets/bitcoin.jpg', website:'', github:'', titre:'Convertisseur cryptos', description: 'Description du projet 1', langages: ['PHP', 'MySQL'] },
         { categorie: ['symfony', 'all'], image: 'images/projets/todo.jpg', website:'', github:'', titre:'ToDo List', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
         { categorie: ['symfony', 'all'], image: 'images/projets/bitcoin.jpg', website:'', github:'', titre:'Blog/social', description: 'Description du projet 2', langages: ['Symfony', 'Doctrine'] },
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="langages">
                         ${projet.langages.map(langage => `<span>${langage}</span>`).join('')}
                     </div>
-                    <button class="more-btn">More</button> <!-- Ajout du bouton "More" -->
+                    <button class="more-btn">+</button>
                 </div>
             `;
 
@@ -95,11 +95,17 @@ document.addEventListener('DOMContentLoaded', function() {
         categories.forEach(categorie => {
             if (categorie === categorieSelectionnee) {
                 categorie.style.border = '2px solid #100c0c';
+                categorie.style.backgroundColor = '#092756'; // Mettre à jour la couleur de fond
+                categorie.style.color = '#fff'; // Mettre à jour la couleur du texte
             } else {
                 categorie.style.border = 'none';
+                categorie.style.backgroundColor = '#fff'; // Rétablir la couleur de fond par défaut
+                categorie.style.color = '#092756'; // Rétablir la couleur du texte par défaut
             }
         });
     }
+    
+    
 
     // Afficher tous les projets au début
     afficherProjets(['all']);
