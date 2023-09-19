@@ -1,0 +1,63 @@
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+  .menu ul li a{
+    color: 	#FAEBD7;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: color .3s;
+  }
+
+  .menu ul li a:hover,.name:hover {
+    color: #000000; /* Violet foncé */
+    transition: color 0.3s;
+  }
+
+  .name {
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    color: #FAEBD7;
+
+}
+
+
+/*Name effect*/
+
+/*Name effect*/
+.waviy {
+  position: relative;
+  font-size: 17px; /* Ajustez la taille de police selon vos préférences */
+}
+.waviy span {
+  letter-spacing: -3px;
+  position: relative;
+  display: inline-block;
+  color: #FAEBD7;
+  animation: flip 4s infinite; /* Augmentez la durée de l'animation à 5 secondes */
+  animation-delay: calc(.2s * var(--i));
+}
+.waviy .space::after {
+  content: '\00a0'; /* Ajoutez un espace entre le nom et le prénom */
+}
+@keyframes flip {
+  0%, 80% {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (max-width: 780px) {
+  .logo-container{
+    display: none;
+  }
+}
+
+/* .name-mobile{
+  display: none;
+} */

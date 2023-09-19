@@ -19,108 +19,8 @@ h2{
   color: #333;
 } */
 
-/****** Section à propos ******/
-.about {
-    text-align: center;
-    padding: 100px 20px;
-}
 
-.presentation h2 {
-    font-size: 2rem;
-    /* margin-bottom: 20px; */
-    text-align: center;
-}
-
-.presentation {
-    margin-bottom: 50px;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Espacement entre les deux colonnes */
-  text-align: center;
-  /* background-color: #fff;  */
-  /* Couleur de fond */
-  padding: 50px 20px;
-}
-
-.content-main,
-.content-skills {
-  background-color: #f0f0f0; /* Couleur de fond */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
-  z-index: 3;
-}
-
-.content-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-align: left;
-  margin-top: 10px;
-}
-
-.content-details-sentence {
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.content-skills {
-  text-align: center;
-}
-
-.skill-logo {
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.skill-logo img {
-  width: 100px; /* Ajustez la taille selon vos besoins */
-  height: 100px; /* Ajustez la taille selon vos besoins */
-  padding: 10px;
-  box-shadow: 0px 15px 10px -15px #111;   
-  
-}
-
-/*Plusieurs animations pour le survol des skills */
-
-/* Déplacement vers le haut: L'image peut légèrement monter vers le haut au survol. */
-/* .skill-logo:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-} */
-
-/* Ombre portée: Une ombre peut apparaître autour de l'image au survol. */
-/* .skill-logo:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease;
-} */
-
-/* Opacité: L'opacité de l'image peut changer au survol. */
-/* .skill-logo:hover {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-} */
-
-/*Scale (Agrandissement/Réduction): L'image peut légèrement s'agrandir au survol pour donner un effet dynamique.*/
-/* .skill-logo:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-} */
-
-/* .skill-logo:hover {
-  transform: rotate(360deg);
-} */
-
-.skill-logo:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
-
+/**********/
 
 hr {
   position: relative;
@@ -179,14 +79,14 @@ hr {
   font-size: 16px;
 }
 
-a[href^="mailto"] {
+.footer-content a[href^="mailto"] {
   position: relative;
   color: #ffffff; /* Choisir la couleur de votre choix */
   font-weight: bold;
   text-decoration: none;
 }
 
-a[href^="mailto"]::before {
+.footer-content a[href^="mailto"]::before {
   content: "\f0e0"; /* Code de l'icône enveloppe (Font Awesome) */
   font-family: "Font Awesome 5 Free";
   margin-right: 5px;
@@ -197,6 +97,6 @@ a[href^="mailto"]::before {
   transform: translateY(-50%);
 }
 
-a[href^="mailto"]:hover::before {
+.footer-content a[href^="mailto"]:hover::before {
   transform: translate(-50%, -50%) rotate(360deg);
 }

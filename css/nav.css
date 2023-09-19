@@ -39,10 +39,10 @@
     --search-text: #010718;
 }
 
-body{
+/* body{
     height: 100vh;
     background-color: var(--body-color);
-}
+} */
 
 body.dark{
     --body-color: #18191A;
@@ -78,7 +78,8 @@ nav{
 /* Ajoutez une transition pour un effet en douceur */
 nav {
     transition: background-color 0.3s, box-shadow 0.3s;
-    backdrop-filter: blur(10px); /* Effet de flou pour un aspect de verre givré */
+    backdrop-filter: blur(10px); 
+    /* Effet de flou pour un aspect de verre givré */
 }
 
 
@@ -172,12 +173,18 @@ nav .nav-bar .logo a{
     overflow: hidden;
     margin-right: 10px;
   }
+
+  .circle:hover{
+    background: white;
+  }
   
   .circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
+  
   .heading-primary{
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -186,30 +193,9 @@ nav .nav-bar .logo a{
     color: 	#FAEBD7;
     font-weight: 800;
   }
-  .name {
-    font-size: 1.2em;
-  }
-
-  .name:hover{
-    cursor: pointer;
-  }
-  
 
   
-  .menu ul li a, .name {
-    color: 	#FAEBD7;
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    transition: color .3s;
-  }
 
-  .menu ul li a:hover,.name:hover {
-    color: #000000; /* Violet foncé */
-    transition: color 0.3s;
-  }
   
   .hamburger-menu {
     display: none;
@@ -528,3 +514,4 @@ body.dark .search-field i{
     }
   }
   
+

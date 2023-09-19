@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/projets.css">
     <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/name-effect.css">
+    <link rel="stylesheet" href="css/about-me.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -22,20 +24,43 @@
 <body>
     <nav>
         <div class="nav-bar">
-            <i class='bx bx-menu sidebarOpen' ></i>
+            <i class='bx bx-menu sidebarOpen'></i>
             <div class="logo-container">
                 <div class="circle">
-                    <img src="images/photo/photo.png" alt="Ma Photo">
+                    <img src="images/photo/me.png" alt="Ma Photo">
                 </div>
-                <div data-value="BARA ERVIN" class="name">BARA ERVIN</div>
+                <!-- <div data-value="BARA ERVIN" class="name-mobile">BARA ERVIN</div> -->
+                <div class="name waviy">
+                    <span style="--i:1">B</span>
+                    <span style="--i:2">A</span>
+                    <span style="--i:3">R</span>
+                    <span style="--i:4">A</span>
+                    <span class="space" style="--i:5"></span>
+                    <span style="--i:6">E</span>
+                    <span style="--i:7">R</span>
+                    <span style="--i:8">V</span>
+                    <span style="--i:9">I</span>
+                    <span style="--i:10">N</span>
+                </div>
             </div>
 
             <div class="menu">
                 <div class="logo-toggle">
                     <div class="circle">
-                        <img src="images/photo/photo.png" alt="Ma Photo">
+                        <img src="images/photo/me.png" alt="Ma Photo">
                     </div>
-                    <div data-value="BARA ERVIN" class="name">BARA ERVIN</div>
+                    <div class="name waviy">
+                        <span style="--i:1">B</span>
+                        <span style="--i:2">A</span>
+                        <span style="--i:3">R</span>
+                        <span style="--i:4">A</span>
+                        <span class="space" style="--i:5"></span>
+                        <span style="--i:6">E</span>
+                        <span style="--i:7">R</span>
+                        <span style="--i:8">V</span>
+                        <span style="--i:9">I</span>
+                        <span style="--i:10">N</span>
+                    </div>
                     <i class='bx bx-x siderbarClose'></i>
                 </div>
 
@@ -72,63 +97,98 @@
             <a href="#projets" class="projects-btn icon smooth-scroll">PROJETS</a>
         </div>
         <div class="scroll-indicator">
-            <a class="icon smooth-scroll" href="#a-propos"><span></span></a>
+            <a class="icon smooth-scroll" href="#about-me"><span></span></a>
         </div>
     </section>
     
-    <section id="a-propos" class="about">
-        <div class="presentation">
-            <!-- Partie Présentation -->
-            <h2>ABOUT ME</h2>
-            <hr class="hr-dotted">
-        </div>
-        
-        <div class="about-content">
-            <div class="content-main">
-                <!-- Partie about & skills -->
-                <h3 class="content-title">En quelques mots</h3>
-                <div class="content-details">
-                    <p class="content-details-sentence">Fondamentalement orienté vers le <strong>développement backend</strong>, j'ai également eu l'occasion d'explorer et de développer mes compétences en <strong>frontend</strong>.</p>
-                    <p class="content-details-sentence">J'apprécie les différents aspects du <strong>développement web</strong>, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend.</p>
-                    <p class="content-details-sentence">Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une <strong>vision complète et équilibrée</strong>.</p>
-                </div>                
+    <section class="about-me" id="about-me">
+        <div class="container">
+          <div class="about-me-container">
+            <div class="about-me-title">
+              About me<br>
             </div>
+      
+            <div class="about-me-flex-container">
+              <div class="about-me-image">
+                <div class="back-div"></div>
+                <div class="black-image"><img src="images/photo/space_2.jpg" alt="black"></div>
+                <div class="main-image"><img src="images/photo/ervin_2.jpg" alt="smit"></div>
+              </div>
+              <div class="about-me-content">
+      
+                <div class="logo logo-animation">
+                    <img class="first-monkey" src="images/photo/me.png" alt="ervin">
+                </div>
+      
+                <div class="text">
+                    Fondamentalement orienté vers le <strong>développement backend</strong>, j'ai également eu l'occasion d'explorer et de développer mes compétences en <strong>frontend</strong>
+      
+                  <br><br>
 
-            <div class="content-skills">
-                <h3 class="content-title">Compétences</h3>
-                    <div class="skill-logo" data-skill="PHP">
-                        <img src="images/skills/php.svg" alt="PHP">
-                    </div>
-                    <div class="skill-logo" data-skill="Symfony">
-                        <img src="images/skills/symfony.svg" alt="Symfony">
-                    </div>
-                    <div class="skill-logo" data-skill="Javascript">
-                        <img src="images/skills/javascript.svg" alt="Javascript">
-                    </div>
-                    <div class="skill-logo" data-skill="html">
-                        <img src="images/skills/html.svg" alt="html">
-                    </div>
-                    <div class="skill-logo" data-skill="css">
-                        <img src="images/skills/css.svg" alt="css">
-                    </div>
-                    <div class="skill-logo" data-skill="python">
-                        <img src="images/skills/python.svg" alt="python">
-                    </div>
-                    <div class="skill-logo" data-skill="bootstrap">
-                        <img src="images/skills/bootstrap.svg" alt="bootstrap">
-                    </div>
-                    <div class="skill-logo" data-skill="mysql">
-                        <img src="images/skills/mysql.svg" alt="mysql">
-                    </div>
-                    <div class="skill-logo" data-skill="github">
-                        <img src="images/skills/github.svg" alt="github">
-                    </div>
-                    <div class="skill-logo" data-skill="responsive">
-                        <img src="images/skills/responsive.svg" alt="responsive design">
-                    </div>
+                  J'apprécie les différents aspects du <strong>développement web</strong>, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend.
+                  Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une <strong>vision complète et équilibrée</strong>  
+                </div>
+              </div>
             </div>
+            
+            <ul class="social-menu">
+                <li class="social-btn gmail" tooltip="gmail">
+                    <a href="#"><i class="fab fa-google fa-2x"></i></a>
+                </li>
+                <li class="social-btn linkedin" tooltip="linkedin">
+                    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                </li>
+                <li class="social-btn github" tooltip="github">
+                    <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                </li>
+                <li class="social-btn cv" tooltip="cv">
+                    <a href="#"><i class="far fa-file-pdf fa-2x"></i></a>
+                </li>
+            </ul>
+            
+            
+          </div>
+      
         </div>
-    </section>
+      </section>
+      
+    
+
+    <!-- <section class="skills">
+        <div class="content-skills">
+            <h3 class="content-title">Compétences</h3>
+                <div class="skill-logo" data-skill="PHP">
+                    <img src="images/skills/php.svg" alt="PHP">
+                </div>
+                <div class="skill-logo" data-skill="Symfony">
+                    <img src="images/skills/symfony.svg" alt="Symfony">
+                </div>
+                <div class="skill-logo" data-skill="Javascript">
+                    <img src="images/skills/javascript.svg" alt="Javascript">
+                </div>
+                <div class="skill-logo" data-skill="html">
+                    <img src="images/skills/html.svg" alt="html">
+                </div>
+                <div class="skill-logo" data-skill="css">
+                    <img src="images/skills/css.svg" alt="css">
+                </div>
+                <div class="skill-logo" data-skill="python">
+                    <img src="images/skills/python.svg" alt="python">
+                </div>
+                <div class="skill-logo" data-skill="bootstrap">
+                    <img src="images/skills/bootstrap.svg" alt="bootstrap">
+                </div>
+                <div class="skill-logo" data-skill="mysql">
+                    <img src="images/skills/mysql.svg" alt="mysql">
+                </div>
+                <div class="skill-logo" data-skill="github">
+                    <img src="images/skills/github.svg" alt="github">
+                </div>
+                <div class="skill-logo" data-skill="responsive">
+                    <img src="images/skills/responsive.svg" alt="responsive design">
+                </div>
+        </div>
+    </section> -->
     
     <section id="timeline">
         <div class="presentation">
@@ -231,34 +291,33 @@
 
     
 
-<footer id="contact" class="footer">
+<section id="contact" class="footer">
     <h2>CONTACT</h2>
     <hr class="hr-dotted">
     <div class="footer-content">
         <p><a href="mailto:votre.email@example.com">ervinbara17@gmail.com</a></p>
         
         <div class="social-links">
-            <a href="https://github.com/votreprofil" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://linkedin.com/in/votreprofil" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Ervinbara" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/ervin-bara-02bb90141/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="images/CV public de Ervin Bara.pdf" target="_blank"><i class="fas fa-file-alt"></i> Mon CV</a>
         </div>
         <p class="creator-text">Website by Ervin Bara</p>
     </div>
-
     
-    
-</footer>
+</section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/style.js"></script>
     <script src="js/night-mode.js"></script>
-    <script src="js/slide-skills.js"></script>
     <script src="js/nav-responsive.js"></script>
     <script src="js/smooth-ancre-scroll.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/nav-scroll.js"></script>
     <script src="js/projets.js"></script>
-    
+    <script src="js/socials-icons.js"></script>
+    <script src="js/animation-about-me.js"></script>
 
+    
 </body>
 </html>
