@@ -1,0 +1,61 @@
+/*Section footer*/
+
+.footer {
+    position: relative;
+    z-index: 2;
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centrer le contenu */
+    top: 200px;
+
+  }
+  
+  
+  .creator-text{
+    position: relative;
+    bottom: -150px;
+    font-size: 14px!important;
+  }
+  
+
+  .footer h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  .social-links a:hover {
+    color: #007bff;
+  }
+  
+  .creator-text {
+    font-size: 16px;
+  }
+  
+  .footer-content a[href^="mailto"] {
+    position: relative;
+    color: #ffffff; /* Choisir la couleur de votre choix */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .footer-content a[href^="mailto"]::before {
+    content: "\f0e0"; /* Code de l'icône enveloppe (Font Awesome) */
+    font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    transition: transform 0.3s;
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+  }
+  
+  .footer-content a[href^="mailto"]:hover::before {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  

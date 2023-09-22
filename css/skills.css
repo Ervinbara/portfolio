@@ -1,0 +1,290 @@
+.skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+    position: relative;
+  }
+  
+  .skill-header {
+    margin-bottom: 1rem;
+  }
+  
+  .skills-wrapper img {
+    padding: 1.25rem;
+  }
+  
+  .skills .icon {
+    width: 11.875rem;
+    height: 11.25rem;
+  }
+
+
+  
+
+/* Style pour les compétences */
+.icon-card {
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin: 10px;
+}
+
+.icon-card:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: transform 0.2s; /* Ajout de la transition ici */
+  box-shadow: -20px -20px 30px -25px var(--color1),
+    20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1),
+    7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+    animation: pulse 0s;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* Style pour le modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: -100%; /* Initial position à gauche */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 60px;
+  z-index: 101;
+}
+
+.modal.active {
+  animation: slideOutRight 0.3s forwards; /* Animation de sortie */
+}
+
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-out-right {
+  left: 0;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+
+/*Design and effect button close*/
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 102;
+}
+
+.sphere {
+  width: 30px;
+  height: 30px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.cross {
+  position: relative;
+  width: 70%;
+  height: 2px;
+  transform-origin: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bar1, .bar2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  background-color: #fff;
+}
+
+.bar1 {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.bar2 {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.close:hover .cross {
+  transform: rotate(45deg);
+}
+
+.close:hover .sphere {
+  background-color: #555;
+}
+
+
+
+/* End Design and effect button close*/
+
+
+.logo-skills img {
+  max-width: 100px;
+  height: auto;
+}
+
+.card-wrap{
+  margin: 5% auto;
+  border: 1px solid #888;
+  max-width: 550px;
+  text-align: center;
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+              rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.card-wrap:hover{
+  transform: scale(1.1);
+}
+
+.card-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+}
+.card-wrap:hover:after {
+  width: 120%;
+  background-color: rgba(255,255,255,0);
+  
+	-webkit-transition: all 0.4s ease-in-out;
+	   -moz-transition: all 0.4s ease-in-out;
+	        transition: all 0.4s ease-in-out;
+}
+
+
+
+.card-header{
+  height: 200px;
+  width: 100%;
+  border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card-header img{
+  max-width: 35%;
+}
+
+.card-header i{
+  color: #fff;
+  font-size: 72px;
+}
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.card-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+.card-text{
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.card-btn{
+  border: none;
+  border-radius: 100px;
+  padding: 5px 30px;
+  /* color: #fff; */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+
+
+/*Progress bar*/
+.progress-bar {
+  max-width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 15px;
+  margin: 10px 0;
+}
+
+.progress {
+  position: relative;
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 5px;
+}
+.progress-percent {
+  position: absolute;
+  top: 55%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #595959;
+}
+
+
+
+
+

@@ -15,8 +15,8 @@
   }
 
   .menu ul li a:hover,.name:hover {
-    color: #000000; /* Violet foncé */
     transition: color 0.3s;
+    opacity: 0.8;
   }
 
   .name {
