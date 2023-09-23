@@ -8,18 +8,138 @@
     background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
     background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
     background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    /*Mode nuit/jour*/
+    transition: background-color 50s;
+    -webkit-transition: background-color 0.5s; /* Pour la compatibilité avec certains navigateurs WebKit */
+    -moz-transition: background-color 0.5s; /* Pour la compatibilité avec Firefox */
+    -o-transition: background-color 0.5s; /* Pour la compatibilité avec Opera */
+
 }
 
 :root {
-    --background_d: black;
-    --background_1: rgba(104, 128, 138, 0.4);
-    --background_2: rgba(57, 173, 219, 0.25);
-    --background_3: rgba(42, 60, 87, 0.4);
-    --background_4: rgba(103, 13, 16, 0.4);
-    --background_5: rgba(9, 39, 86, 0.4);
-    --background_6: rgba(2, 39, 86, 0.4);
-    /* ... Ajoutez les autres couleurs au besoin */
+    --text-color1: #916453;
+    --text-color2: #693b31;
+    --background_1: linear-gradient(to right, #d3f1f9 0%, #d3f1f9 25%, #d3f1f9 50%, #d3f1f9 75%, #d3f1f9 100%);
+    --btn-p: linear-gradient(135deg, #916453, #fb9085);
+    --btn-project-hover: linear-gradient(135deg,#fb9085, #916453, );
 }
 
 
 /*Bouton mode nuit*/
+.day-mode {
+
+    background: var(--background_1)
+
+    /* background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #ffffff 0%,#dec2ea 100%);
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -moz-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #ffffff 0%,#dec2ea 100%); */
+}
+
+h1.day-mode-text {
+    color: var(--text-color1); /* Couleur du texte en mode jour (noir dans cet exemple) */
+}
+
+h2.day-mode-text {
+    color: var(--text-color1); /* Couleur du texte en mode jour (noir dans cet exemple) */
+}
+
+p.day-mode-text {
+    color: var(--text-color1);
+}
+
+.nav-links.day-mode-text li a{
+    color: var(--text-color1);
+}
+
+.name.waviy.day-mode-text span{
+    color: var(--text-color1);
+}
+
+.about-me-title.day-mode-text span{
+    color: var(--text-color1);
+}
+
+
+.text.day-mode-text span{
+    color: var(--text-color1);
+}
+
+.timeline p.day-mode-text{
+    color: var(--text-color1);
+}
+
+.timeline h3.day-mode-text{
+    color: var(--text-color2);
+}
+
+.slg.day-mode-text, .sll.day-mode-text, .slc.day-mode-text{
+    color: var(--text-color1);
+}
+
+.fc.day-mode-text{
+    color: var(--text-color1)!important;
+}
+
+.creator-text.day-mode-text{
+    color: var(--text-color1);
+}
+
+.social-icons.day-mode-text i{
+    color: var(--text-color1)
+}
+
+.projects-btn.icon.smooth-scroll.day-mode-text{
+    background: var(--btn-p);
+}
+.projects-btn.icon.smooth-scroll.day-mode-text::before{
+    background: var(--btn-p);
+}
+
+
+/******************/
+
+
+.darkLight{
+    position: relative;
+}
+.darkLight .hidden {
+    display: none;
+}
+
+/* Style du toggle switch */
+.toggle-checkbox {
+    display: none;
+  }
+  
+  .toggle-label {
+    background-color: #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+
+  }
+  
+  .toggle-label::before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 21px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 21px;
+    transition: 0.3s;
+  }
+  
+  .toggle-checkbox:checked + .toggle-label {
+    background-color: #092756; /* Couleur du fond en mode nuit */
+  }
+  
+  .toggle-checkbox:checked + .toggle-label::before {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+    background-color: #df9e85; /* Couleur de la boule en mode jour */
+  }
+  

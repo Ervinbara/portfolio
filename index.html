@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
     
-<body>
-    <div class="social-background"></div>
+<body class="night-mode">
+  <div class="social-background"></div>
     <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen'></i>
@@ -37,7 +37,7 @@
                     <img src="images/photo/me.png" alt="Ma Photo">
                 </div>
                 <!-- <div data-value="BARA ERVIN" class="name-mobile">BARA ERVIN</div> -->
-                <div class="name waviy">
+                <div class="name waviy night-mode-text">
                     <span style="--i:1">B</span>
                     <span style="--i:2">A</span>
                     <span style="--i:3">R</span>
@@ -56,7 +56,7 @@
                     <div class="circle">
                         <img src="images/photo/me.png" alt="Ma Photo">
                     </div>
-                    <div class="name waviy">
+                    <div class="name waviy night-mode-text">
                         <span style="--i:1">B</span>
                         <span style="--i:2">A</span>
                         <span style="--i:3">R</span>
@@ -73,11 +73,11 @@
 
                 
                 
-                <ul class="nav-links">
-                    <li><a href="#accueil" class="icon smooth-scroll">Home</a></li>
-                    <li><a href="#a-propos" class="icon smooth-scroll">About</a></li>
-                    <li><a href="#timeline" class="icon smooth-scroll">Timeline</a></li>
-                    <li><a href="#projets" class="icon smooth-scroll">Projects</a></li>
+                <ul class="nav-links night-mode-text">
+                    <li><a href="#accueil" class="icon smooth-scroll night-mode-text">Home</a></li>
+                    <li><a href="#a-propos" class="icon smooth-scroll night-mode-text">About</a></li>
+                    <li><a href="#timeline" class="icon smooth-scroll night-mode-text">Timeline</a></li>
+                    <li><a href="#projets" class="icon smooth-scroll night-mode-text">Projects</a></li>
                 </ul>
             </div>
 
@@ -86,14 +86,17 @@
             </div>
             
 
-
+            
 
             <div class="darkLight">
-                <div class="dark-light mode-toggle">
-                    <i class='bx bx-moon moon'></i>
-                    <i class='bx bx-sun sun'></i>
-                </div>
+              <div class="dark-light mode-toggle">
+                <input type="checkbox" class="toggle-checkbox" id="modeToggle">
+                <label class="toggle-label" for="modeToggle"></label>
+              </div>
             </div>
+            
+          
+          
             
 
         </div>
@@ -101,16 +104,16 @@
 
     <section id="accueil" class="banner">
         
-            <div class="social-icons">
+            <div class="social-icons night-mode-text">
                 <a href="https://github.com/Ervinbara" target="_blank"><i class="fab fa-github fa-xl"></i></a>
                 <a href="https://www.linkedin.com/in/ervin-bara-02bb90141/" target="_blank"><i class="fab fa-linkedin fa-xl"></i></a>
                 <a href="mailto:ervinbara17@gmail.com"><i class="fas fa-envelope fa-xl"></i></a>
             </div>
         </div>
         <div class="text-container">
-            <h1 class="heading-primary">Hey, welcome to my portfolio</h1>
-            <p class="intro"></p>
-            <a href="#projets" class="projects-btn icon smooth-scroll">PROJETS</a>
+            <h1 class="heading-primary night-mode-text">Hey, welcome to my portfolio</h1>
+            <p class="intro night-mode-text"></p>
+            <a href="#projets" class="projects-btn night-mode-text icon smooth-scroll">PROJETS</a>
         </div>
         <div class="scroll-indicator">
             <a class="icon smooth-scroll" href="#about-me"><span></span></a>
@@ -120,8 +123,9 @@
     <section class="about-me" id="about-me">
         <div class="container">
           <div class="about-me-container">
-            <div class="about-me-title">
-              About me<br>
+            <div class="about-me-title night-mode-text">
+              <span>About me</span><br>
+              <!-- <p>About me</p> -->
             </div>
       
             <div class="about-me-flex-container">
@@ -136,13 +140,15 @@
                     <img class="first-monkey" src="images/photo/me.png" alt="ervin">
                 </div>
       
-                <div class="text">
+                <div class="text night-mode-text">
+                  <span>
                     Fondamentalement orienté vers le <strong>développement backend</strong>, j'ai également eu l'occasion d'explorer et de développer mes compétences en <strong>frontend</strong>
       
                   <br><br>
 
                   J'apprécie les différents aspects du <strong>développement web</strong>, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend.
                   Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une <strong>vision complète et équilibrée</strong>  
+                </span>
                 </div>
               </div>
             </div>
@@ -175,7 +181,7 @@
     <section id="timeline">
         <div class="presentation">
             <!-- Partie Présentation -->
-            <h2>TIMELINE</h2>
+            <h2 class="night-mode-text">TIMELINE</h2>
             <hr class="hr-dotted">
         </div>
         <div class="timeline">
@@ -183,41 +189,41 @@
             <ul>
               <li>
                 <div class="content content-left">
-                  <h3>What is Lorem Ipsum?</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                  <h3 class="pa night-mode-text">What is Lorem Ipsum?</h3>
+                  <p class="pa night-mode-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
-                <div class="time content-right">
-                  <h4>January 2018</h4>
+                <div class="time content-right pa night-mode-text">
+                  <h4 >January 2018</h4>
                 </div>
               </li>
               
               <li>
                 <div class="content content-right">
-                  <h3>What is Lorem Ipsum?</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                  <h3 class="pe night-mode-text">What is Lorem Ipsum?</h3>
+                  <p class="pe night-mode-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
                 <div class="time content-left">
-                  <h4>February 2018</h4>
+                  <h4 class="night-mode-text pe night-mode-text">February 2018</h4>
                 </div>
               </li>
               
               <li>
                 <div class="content content-left">
-                  <h3>What is Lorem Ipsum?</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                  <h3 class="po night-mode-text">What is Lorem Ipsum?</h3>
+                  <p class="po night-mode-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
                 <div class="time content-right">
-                  <h4>March 2018</h4>
+                  <h4 class="night-mode-text po night-mode-text">March 2018</h4>
                 </div>
               </li>
               
               <li>
                 <div class="content content-right">
-                  <h3>What is Lorem Ipsum?</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                  <h3 class="pu night-mode-text">What is Lorem Ipsum?</h3>
+                  <p class="pu night-mode-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
                 <div class="time content-left">
-                  <h4>April 2018</h4>
+                  <h4 class="night-mode-text pu night-mode-text">April 2018</h4>
                 </div>
               </li>
               
@@ -231,7 +237,7 @@
     
 
     <section class="skills" id="skills">
-        <h2 class="skill-header">Compétences</h2>
+        <h2 class="night-mode-text skill-header ">Compétences</h2>
   
         <div class="skills-wrapper">
           <div class="first-set animate__animated animate__pulse">
@@ -351,7 +357,7 @@
   
         <div class="presentation">
             <!-- Partie Présentation -->
-            <h2>PROJECTS</h2>
+            <h2 class="porojou night-mode-text">PROJECTS</h2>
             <hr class="hr-dotted">
         </div>
         <div class="projets-categories">
@@ -371,17 +377,17 @@
     
 
 <section id="contact" class="footer">
-    <h2>CONTACT</h2>
+    <h2 class="contaktou night-mode-text">CONTACT</h2>
     <hr class="hr-dotted">
     <div class="footer-content">
-        <p><a href="mailto:votre.email@example.com">ervinbara17@gmail.com</a></p>
+        <p><a class="fc night-mode-text" href="mailto:votre.email@example.com">ervinbara17@gmail.com</a></p>
         
-        <div class="social-links">
-            <a href="https://github.com/Ervinbara" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/ervin-bara-02bb90141/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="images/CV public de Ervin Bara.pdf" target="_blank"><i class="fas fa-file-alt"></i> Mon CV</a>
+        <div class="social-links night-mode-text">
+            <a class="slg night-mode-text" href="https://github.com/Ervinbara" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a class="sll night-mode-text" href="https://www.linkedin.com/in/ervin-bara-02bb90141/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a class="slc night-mode-text" href="images/CV public de Ervin Bara.pdf" target="_blank"><i class="fas fa-file-alt"></i> Mon CV</a>
         </div>
-        <p class="creator-text">Website by Ervin Bara</p>
+        <p class="creator-text night-mode-text">Website by Ervin Bara</p>
     </div>
 </section>
 
