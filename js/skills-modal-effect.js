@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const skills = [
-        { name: 'php', level: 100, description: 'Description of your experience with PHP coco.', color: '#7177cf' },
-        { name: 'symfony', level: 80, description: 'Description of your experience with caca.', color: '#7F00FF' },
-        { name: 'html', level: 75, description: 'Description of your experience with PHP.', color: '#3f2b96' },
-        { name: 'css', level: 75, description: 'Description of your experience with PHP.', color: '#11998e' },
-        { name: 'python', level: 75, description: 'Description of your experience with PHP.', color: '#4CAF50' },
+        { name: 'php10', level: 100, description: 'Description of your experience with PHP coco.', color: '#777bb3' },
+        { name: 'symfony', level: 80, description: 'Description of your experience with caca.', color: '#1a171b' },
+        { name: 'html3', level: 75, description: 'Description of your experience with PHP.', color: '#e44f26' },
+        { name: 'css3', level: 75, description: 'Description of your experience with PHP.', color: '#1572b6' },
+        { name: 'python1', level: 75, description: 'Description of your experience with PHP.', color: '#3776ab' },
+        { name: 'javascript17', level: 75, description: 'Description of your experience with PHP.', color: '#f7df1e' },
+        { name: 'bootstrap4', level: 75, description: 'Description of your experience with PHP.', color: '#563d7c' },
+        { name: 'mysql', level: 75, description: 'Description of your experience with PHP.', color: '#cbc6d1' },
+        { name: 'responsive2', level: 75, description: 'Description of your experience with PHP.', color: '#cbc6d1' },
+        { name: 'github18', level: 75, description: 'Description of your experience with PHP.', color: '#f5f5f5' },
         // Ajoutez d'autres compétences au besoin
     ];
 
@@ -14,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     skillImages.forEach(image => {
         image.addEventListener('click', function() {
             const skillName = this.dataset.skill;
+            console.log(skillName);
             const skill = skills.find(skill => skill.name === skillName);
+            // const skill = skills.find();
             // Bloquer le fond du site
             document.body.style.overflow = 'hidden';
             const modal = document.createElement('div');

@@ -19,7 +19,7 @@
   
   .skills .icon {
     width: 11.875rem;
-    height: 11.25rem;
+    /* height: 11.25rem; */
   }
 
 
@@ -225,7 +225,7 @@
 }
 
 .card-header img{
-  max-width: 35%;
+  max-width: 29%;
 }
 
 .card-header i{
