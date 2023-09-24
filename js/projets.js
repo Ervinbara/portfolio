@@ -170,7 +170,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     socialLinkSection.appendChild(githubLink);
                 }
                 
-                
+                const socialBackground = document.querySelector('.social-background');
+
+                // Vérifiez si la div social-background possède la classe day-mode
+                if (socialBackground.classList.contains('day-mode')) {
+                    // Si oui, ajoutez la classe day-mode-text à la sidebar
+                    sidebar.classList.remove('night-mode-text');
+                    sidebar.classList.add('day-mode-text');
+                } else {
+                    // Sinon, ajoutez la classe night-mode-text à la sidebar
+                    sidebar.classList.remove('day-mode-text');
+                    sidebar.classList.add('night-mode-text');
+                }
+
     
                 sidebar.classList.add('show');
                 overlay.style.display = 'block';

@@ -104,6 +104,10 @@
   font-size: 12px;
 }
 
+.projets-categories{
+  padding-top: 60px;
+}
+
 .projets-categories button{
   z-index: 10;
 }

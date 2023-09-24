@@ -94,6 +94,37 @@ p.day-mode-text {
     background: var(--btn-p);
 }
 
+.time.pa.day-mode-text, .time.pe.day-mode-text, .time.po.day-mode-text, .time.pu.day-mode-text{
+    background: var(--btn-p)!important;
+}
+
+.sidebar.day-mode-text{
+    background: var(--text-color1);
+}
+
+.smc.day-mode-text i,.smg.day-mode-text i, .sml.day-mode-text i, .smm.day-mode-text i{
+    color: var(--text-color1);
+}
+
+.bounce0.day-mode-text, .bounce1.day-mode-text, .bounce2.day-mode-text, .bounce3.day-mode-text{
+    border: 2px solid black;
+
+}
+
+li.do.day-mode-text::before, li.re.day-mode-text::before, li.mi.day-mode-text::before, li.fa.day-mode-text::before  {
+	background: var(--text-color2)!important;
+}
+
+i.bx.day-mode-text::before{
+    color: var(--text-color1);
+}
+
+@media (max-width: 790px){
+
+    .menu.day-mode-text{
+        background-color: #bbb;
+    }
+}
 
 /******************/
 
