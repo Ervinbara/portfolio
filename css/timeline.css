@@ -9,7 +9,9 @@
 }
 .timeline p{
 	color: #FAEBD7;
+	font-weight: bold;
 }
+
 .timeline{
 	position:relative;
 	margin:50px auto;
@@ -113,6 +115,7 @@
 	background: linear-gradient(135deg, #e74c3c, #8e44ad);	color:#fff;
 	border-radius:18px;
   }
+
   .timeline ul li:nth-child(even) .time
   {
 	position:absolute;
