@@ -1,0 +1,48 @@
+.selected-language img, #language-options img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+
+/* Ajoutez ces styles pour masquer initialement le menu des options de langues */
+.hidden {
+    opacity: 0;
+}
+
+/* Ajoutez les styles appropriés pour le menu des options de langues */
+#language-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #e8e2da;
+    border: 2px groove #ccc;
+    margin-top: 5px;
+    padding: 5px 0;
+    border-radius: 10px;
+    right: 107px;
+}
+
+#language-options button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+/* Ajoutez ces styles pour styliser le menu déroulant */
+.selected-language {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 25px;
+}
+
+.arrow-down {
+    margin-left: auto;
+    color: #FAEBD7;
+}
+
+.fonction{
+    display: flex;
+}

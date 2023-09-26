@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="css/about-me.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/translate-btn.css">
+
+    <script src="json-langues/fr.json" id="lang-data" type="application/json"></script>
+    <script src="json-langues/en.json" id="lang-data" type="application/json"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -74,26 +82,33 @@
                 
                 
                 <ul class="nav-links night-mode-text">
-                    <li><a href="#accueil" class="icon smooth-scroll night-mode-text">Home</a></li>
-                    <li><a href="#about-me" class="icon smooth-scroll night-mode-text">About</a></li>
-                    <li><a href="#timeline" class="icon smooth-scroll night-mode-text">Timeline</a></li>
-                    <li><a href="#skills" class="icon smooth-scroll night-mode-text">Skills</a></li>
-                    <li><a href="#projets" class="icon smooth-scroll night-mode-text">Projects</a></li>
+                    <li><a id="home-link" href="#accueil" class="icon smooth-scroll night-mode-text">Accueil</a></li>
+                    <li><a id="about-link" href="#about-me" class="icon smooth-scroll night-mode-text">À propos</a></li>
+                    <li><a class="timeline-link" href="#timeline" class="icon smooth-scroll night-mode-text">Parcours</a></li>
+                    <li><a class="skills-link" href="#skills" class="icon smooth-scroll night-mode-text">Compétences</a></li>
+                    <li><a class="projects-link" href="#projets" class="icon smooth-scroll night-mode-text">Projets</a></li>
                 </ul>
+            </div>  
+
+
+            <div class="fonction">
+            <div class="langues">
+              <div class="selected-language" onclick="toggleLanguageOptions()">
+                  <img src="images/langues/flag-fr.svg" class="fr">
+                  <span class="arrow-down">&#x25BE;</span>
+              </div>
+              <div id="language-options" class="hidden">
+                  <button onclick="switchToFrench()"><img src="images/langues/flag-fr.svg" class="fr"></button>
+                  <button onclick="switchToEnglish()"><img src="images/langues/flag-en.svg" class="en"></button>
+              </div>
             </div>
-
-            <div class="translate">
-              <i class="material-icons md-48">translate</i>
-            </div>
-            
-
-            
-
+          
             <div class="darkLight">
               <div class="dark-light mode-toggle">
                 <input type="checkbox" class="toggle-checkbox" id="modeToggle">
                 <label class="toggle-label" for="modeToggle"></label>
               </div>
+            </div>
             </div>
             
           
@@ -112,9 +127,9 @@
             </div>
         </div>
         <div class="text-container">
-            <h1 class="heading-primary night-mode-text">Hey, welcome to my portfolio</h1>
-            <p class="intro night-mode-text"></p>
-            <a href="#projets" class="projects-btn night-mode-text icon smooth-scroll">PROJETS</a>
+            <h1 id="welcome-link" class="heading-primary night-mode-text">Hey, bienvenue sur mon portfolio</h1>
+            <p id="backend-link" class="intro night-mode-text"></p>
+            <a id="projet-btn-link" href="#projets" class="projects-btn night-mode-text icon smooth-scroll">PROJETS</a>
         </div>
         <div class="scroll-indicator">
             <a class="icon smooth-scroll" href="#about-me"><span class="bounce0 night-mode-text"></span></a>
@@ -125,7 +140,7 @@
         <div class="container">
           <div class="about-me-container">
             <div class="about-me-title night-mode-text">
-              <span>About me</span><br>
+              <span id="about-link-section">À propos</span><br>
               <!-- <p>About me</p> -->
             </div>
       
@@ -142,14 +157,15 @@
                 </div>
       
                 <div class="text night-mode-text">
-                  <span>
-                    Fondamentalement orienté vers le <strong>développement backend</strong>, j'ai également eu l'occasion d'explorer et de développer mes compétences en <strong>frontend</strong>
-      
+                  <span id="about-me-text-link">
+                    Fondamentalement orienté vers le développement backend, j'ai également eu l'occasion d'explorer et de développer mes compétences en frontend.
+                    </span>
                   <br><br>
 
-                  J'apprécie les différents aspects du <strong>développement web</strong>, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend.
-                  Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une <strong>vision complète et équilibrée</strong>  
-                </span>
+                  <span id="about-me-text2-link">
+                  J'apprécie les différents aspects du développement web, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend.
+                  Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une vision complète et équilibrée.  
+                  </span>
                 </div>
               </div>
             </div>
@@ -182,7 +198,7 @@
     <section id="timeline">
         <div class="presentation">
             <!-- Partie Présentation -->
-            <h2 class="night-mode-text">TIMELINE</h2>
+            <h2 class="timeline-link night-mode-text">PARCOURS</h2>
             <hr class="hr-dotted">
         </div>
         <div class="timeline">
@@ -190,10 +206,10 @@
             <ul>
               <li class="do night-mode-text">
                 <div class="content content-left">
-                  <h3 class="pa night-mode-text">Développeur Backend Féderation Française de Tennis / Développeur d'applications Php/Symfony OpenClassrooms Paris</h3>
-                  <p class="pa night-mode-text">
+                  <h3 id="titre-text-fft" class="pa night-mode-text">Développeur Backend Féderation Française de Tennis / Développeur d'applications Php/Symfony OpenClassrooms Paris</h3>
+                  <p id="content-text-fft" class="pa night-mode-text">
                     Pendant deux ans en alternance à la Fédération Française de Tennis, j'ai eu l'occasion d'amélioré ma capacité à collaborer au sein d'une équipe en utilisant des outils tel que JIRA. J'ai également été impliqué dans des projets de développement en Java, Python et Php.<br>
-                    En parallèle, j'ai obtenu mon diplôme de développeur Php/Symfony chez OpenClassrooms.<br> Ces deux années d'immersion entre l'école et l'entreprise ont considérablement consolidé mes compétences, en particulier dans le domaine du développement web.   
+                    En parallèle, j'ai obtenu mon diplôme de développeur Php/Symfony chez OpenClassrooms.Ces deux années d'immersion entre l'école et l'entreprise ont considérablement consolidé mes compétences, en particulier dans le domaine du développement web.   
                   </p>
                 </div>
                 <div class="time pa night-mode-text content-right">
@@ -203,8 +219,8 @@
               
               <li class="re night-mode-text">
                 <div class="content content-right">
-                  <h3 class="pe night-mode-text">Développeur Web OpenClassrooms Paris / Animateur Asus (Freelance) Fnac Paris</h3>
-                  <p class="pe night-mode-text">
+                  <h3 id="titre-text-dv" class="pe night-mode-text">Développeur Web OpenClassrooms Paris / Animateur Asus (Freelance) Fnac Paris</h3>
+                  <p id="content-text-dv" class="pe night-mode-text">
                     J'ai obtenu mon diplôme de développement web chez OpenClassrooms où j'ai acquis des compétences essentielles, notamment en HTML5, CSS3, JavaScript, PHP et gestion de bases de données. Parallèlement, j'ai travaillé en tant qu'Animateur Asus (freelance) pour la Fnac et Darty pendant quelques mois.
                   </p>
                 </div>
@@ -215,8 +231,8 @@
               
               <li class="mi night-mode-text">
                 <div class="content content-left">
-                  <h3 class="po night-mode-text">Licence Informatique (2éme année) Paris 13 (Institut Galilée)</h3>
-                  <p class="po night-mode-text">
+                  <h3 id="titre-text-li" class="po night-mode-text">Licence Informatique (2éme année) Paris 13 (Institut Galilée)</h3>
+                  <p id="content-text-li" class="po night-mode-text">
                     Cette expérience m'a offert une solide formation en informatique, couvrant des domaines allant de l'algorithmie aux langages C,C++, bash et Python . J'ai également eu l'opportunité de découvrir l'univers de la robotique grâce à des cours d'initiation, et de travaillez en équipe sur divers projets informatique.                </div>
                   </p>
                 <div class="time po night-mode-text content-right">
@@ -226,8 +242,8 @@
               
               <li class="fa night-mode-text">
                 <div class="content content-right">
-                  <h3 class="pu night-mode-text">BAC ES</h3>
-                  <p class="pu night-mode-text">
+                  <h3 id="titre-text-bac" class="pu night-mode-text">BAC ES</h3>
+                  <p id="content-text-bac" class="pu night-mode-text">
                     Obtention d'un Bac économique et social.
                   </p>
                   </div>
@@ -246,7 +262,7 @@
     
 
     <section class="skills" id="skills">
-        <h2 class="night-mode-text skill-header ">SKILLS</h2>
+        <h2 class="skills-link night-mode-text skill-header ">COMPÉTENCES</h2>
         <hr class="hr-dotted">
 
 
@@ -368,7 +384,7 @@
   
         <div class="presentation">
             <!-- Partie Présentation -->
-            <h2 class="porojou night-mode-text">PROJECTS</h2>
+            <h2 class="projects-link porojou night-mode-text">PROJETS</h2>
             <hr class="hr-dotted">
         </div>
         <div class="projets-categories">
@@ -403,9 +419,16 @@
 </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Fichiers pour la traduction -->
+    <script src="js/translate-btn.js"></script>
+    
+
+
     <script src="js/projets.js"></script>
     <script src="js/style.js"></script>
     <script src="js/night-mode.js"></script>
+    
+
     <script src="js/nav-responsive.js"></script>
     <script src="js/smooth-ancre-scroll.js"></script>
     <script src="js/timeline.js"></script>

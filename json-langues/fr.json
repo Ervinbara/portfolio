@@ -1,0 +1,22 @@
+{
+    "home": "Accueil",
+    "about": "À propos",
+    "timeline": "PARCOURS",
+    "skills": "COMPÉTENCES",
+    "projects": "PROJETS",
+    "welcome": "Hey, bienvenue sur mon portfolio",
+    "projetBtn" : "PROJETS",
+    "aboutMe" : "À propos", 
+    "aboutMeText" : "Fondamentalement orienté vers le développement backend, j'ai également eu l'occasion d'explorer et de développer mes compétences en frontend.",
+    "aboutMeTexte" : "J'apprécie les différents aspects du développement web, que ce soit pour créer des solutions robustes en backend ou pour concevoir des expériences utilisateur optimales en frontend. Cette polyvalence, acquise grâce à ma formation initiale en backend, m'offre la possibilité d'aborder les projets avec une vision complète et équilibrée.",
+    "titreFft" : "Développeur Backend Féderation Française de Tennis / Développeur d'applications Php/Symfony OpenClassrooms Paris",
+    "contentFft" : "Pendant deux ans en alternance à la Fédération Française de Tennis, j'ai eu l'occasion d'amélioré ma capacité à collaborer au sein d'une équipe en utilisant des outils tel que JIRA. J'ai également été impliqué dans des projets de développement en Java, Python et Php.En parallèle, j'ai obtenu mon diplôme de développeur Php/Symfony chez OpenClassrooms.Ces deux années d'immersion entre l'école et l'entreprise ont considérablement consolidé mes compétences, en particulier dans le domaine du développement web.",
+    "titreDv" : "Développeur Web OpenClassrooms Paris / Animateur Asus (Freelance) Fnac Paris",
+    "contentDv" : "J'ai obtenu mon diplôme de développement web chez OpenClassrooms où j'ai acquis des compétences essentielles, notamment en HTML5, CSS3, JavaScript, PHP et gestion de bases de données. Parallèlement, j'ai travaillé en tant qu'Animateur Asus (freelance) pour la Fnac et Darty pendant quelques mois.",
+    "titreLi" : "Licence Informatique (2éme année) Paris 13 (Institut Galilée)",
+    "contentLi" : "Cette expérience m'a offert une solide formation en informatique, couvrant des domaines allant de l'algorithmie aux langages C,C++, bash et Python . J'ai également eu l'opportunité de découvrir l'univers de la robotique grâce à des cours d'initiation, et de travaillez en équipe sur divers projets informatique.",
+    "titreBac" : "BAC ES",
+    "contentBac" : "Obtention d'un Bac économique et social.",
+    "contentPhp" : "J'ai acquis une solide expérience en PHP au cours de mes études ces dernières années. J'ai eu l'opportunité de travailler sur divers aspects du langage, de la programmation orientée objet à la manipulation avancée des bases de données. J'ai ainsi pu mettre en place plusieurs sites web, renforçant ainsi ma maîtrise de ce langage essentiel. De plus, je suis constamment en veille technologique pour rester à jour avec les dernières versions de PHP et les meilleures pratiques de développement. Cette démarche me permet d'intégrer les dernières avancées et d'optimiser mes projets pour des performances optimales."
+}
+  

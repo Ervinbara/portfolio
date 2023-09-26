@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="progress-percent">${skill.level}%</span>
                     </div>
                     <div class="card-content">
-                      <p class="card-text">${skill.description}</p>
+                      <p id="modal-link-${skill.name}" class="card-text">${skill.description}</p>
                    </div>
                   </div>
             </div>

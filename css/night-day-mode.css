@@ -134,6 +134,8 @@ i.bx.day-mode-text::before{
 
 .darkLight{
     position: relative;
+    top: 6px;
+
 }
 .darkLight .hidden {
     display: none;

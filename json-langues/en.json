@@ -1,0 +1,21 @@
+{
+    "home": "Home",
+    "about": "About",
+    "timeline": "TIMELINE",
+    "skills": "SKILLS",
+    "projects": "PROJECTS",
+    "welcome": "Hey, welcome to my portfolio",
+    "projetBtn" : "PROJECTS",
+    "aboutMe" : "About me",
+    "aboutMeText" : "Primarily focused on backend development, I've also had the opportunity to explore and enhance my frontend skills.",
+    "aboutMeTexte" : "I appreciate the various aspects of web development, whether it's crafting robust backend solutions or designing optimal user experiences in the frontend. This versatility, gained through my initial backend-focused training, enables me to approach projects with a comprehensive and balanced perspective.",
+    "titreFft" : "Backend Developer at the French Tennis Federation / Php/Symfony Application Developer at OpenClassrooms Paris",
+    "contentFft" : "During two years of alternating work and studies at the French Tennis Federation, I had the opportunity to enhance my ability to collaborate within a team using tools such as JIRA. I was also involved in development projects using Java, Python, and Php. In parallel, I obtained my diploma as a Php/Symfony developer at OpenClassrooms. These two years of immersion between school and the workplace significantly strengthened my skills, particularly in the field of web development.",
+    "titreDv" : "Web Developer at OpenClassrooms Paris / Asus Presenter (Freelancer) at Fnac Paris",
+    "contentDv" : "I earned my web development diploma from OpenClassrooms, where I acquired essential skills, including HTML5, CSS3, JavaScript, PHP, and database management. Concurrently, I worked as a freelance Asus Presenter for Fnac and Darty for a few months.",
+    "titreLi" : "Computer Science Degree (2nd Year) at Paris 13 (Institut Galilée)",
+    "contentLi" : "This experience provided me with a strong foundation in computer science, covering areas ranging from algorithms to languages like C, C++, Bash, and Python. I also had the opportunity to explore the field of robotics through introductory courses and collaborate with a team on various computer projects.",
+    "titreBac" : "High School Diploma in Economics and Social Sciences",
+    "contentBac" : "Achieved an economic and social sciences high school diploma.",
+    "contentPhp" : "I have gained solid experience in PHP over the past few years during my studies. I had the opportunity to work on various aspects of the language, from object-oriented programming to advanced database manipulation. This allowed me to develop several websites, further enhancing my proficiency in this essential language. Additionally, I am always staying updated with the latest versions of PHP and best development practices through continuous learning. This approach enables me to incorporate the latest advancements and optimize my projects for optimal performance."
+}
