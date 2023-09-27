@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const toggleCheckbox = document.querySelector('.toggle-checkbox');
     const socialBackground = document.querySelector('.social-background');
+    const selectedArrow = document.querySelector(".selected-language span");
     const moonIcon = document.querySelector('.moon');
     const sunIcon = document.querySelector('.sun');
 
@@ -60,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Mode jour
             socialBackground.classList.remove('night-mode');
             socialBackground.classList.add('day-mode');
+            selectedArrow.classList.remove('night-mode-text');
+            selectedArrow.classList.add('day-mode-text');
             elementsToToggle.forEach(element => {
                 element.classList.remove('night-mode-text');
                 element.classList.add('day-mode-text');
@@ -68,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Mode nuit
             socialBackground.classList.remove('day-mode');
             socialBackground.classList.add('night-mode');
+            selectedArrow.classList.remove('day-mode-text');
+            selectedArrow.classList.add('night-mode-text');
             elementsToToggle.forEach(element => {
                 element.classList.remove('day-mode-text');
                 element.classList.add('night-mode-text');

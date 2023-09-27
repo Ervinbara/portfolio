@@ -19,17 +19,6 @@ h2{
   position: relative;
   color: #FAEBD7;
 }
-/* Mode nuit : TODO : à terminer*/
-/* body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-.dark-mode button#toggle-mode {
-  background-color: #000000;
-  color: #333;
-} */
-
 
 /**********/
 
@@ -44,7 +33,3 @@ hr {
   box-shadow: 0 20px 20px -20px #333;
   margin: -50px auto 10px; 
 }
-
-
-/*Icon translate*/
-

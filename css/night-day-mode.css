@@ -122,6 +122,10 @@ i.bx.day-mode-text::before{
     color: var(--text-color1);
 }
 
+.arrow-down.day-mode-text{
+    color: #092756;
+}
+
 @media (max-width: 790px){
 
     .menu.day-mode-text{

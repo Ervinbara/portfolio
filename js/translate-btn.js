@@ -27,7 +27,6 @@ function changeLanguage(lang) {
     document.getElementById("content-text-fft").textContent = langData.contentFft;
     document.getElementById("content-text-li").textContent = langData.contentLi;
     document.getElementById("content-text-bac").textContent = langData.contentBac;
-    // document.getElementById("modal-link-php10").textContent = langData.contentPhp;
     document.getElementById("welcome-link").textContent = langData.welcome;
     document.getElementById("projet-btn-link").textContent = langData.projetBtn;
     document.getElementById("home-link").textContent = langData.home;
@@ -57,6 +56,8 @@ function switchToFrench() {
     const selectedLanguage = document.querySelector(".selected-language img");
     selectedLanguage.src = "images/langues/flag-fr.svg";
     toggleLanguageOptions();
+    body.classList.remove('en');
+    body.classList.add('fr');
 }
 
 // Fonction pour changer la langue en anglais
@@ -65,5 +66,7 @@ function switchToEnglish() {
     const selectedLanguage = document.querySelector(".selected-language img");
     selectedLanguage.src = "images/langues/flag-en.svg";
     toggleLanguageOptions();
+    body.classList.remove('fr');
+    body.classList.add('en');
 }
   
