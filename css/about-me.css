@@ -116,13 +116,11 @@ img {
 .about-me-flex-container .about-me-image .back-div {
   position: absolute;
   bottom: 0;
-  /* z-index: -3; */
   background-color: #858386;
   width: 80%;
   height: 80%;
 }
 .about-me-flex-container .about-me-image .black-image {
-  /* z-index: -2; */
   position: absolute;
   left: 10px;
   bottom: 10px;
@@ -140,7 +138,6 @@ img {
   top: 5%;
   box-shadow: rgb(0, 0, 0) 0px 7px 50px 0px;
   transition: all 0.2s ease-out;
-  /* border-radius: 30%; */
 }
 .about-me-flex-container .about-me-image .main-image:hover {
   transform-origin: top center;

@@ -1,9 +1,9 @@
 {
     "home": "Accueil",
     "about": "À propos",
-    "timeline": "PARCOURS",
-    "skills": "COMPÉTENCES",
-    "projects": "PROJETS",
+    "timeline": "Parcours",
+    "skills": "Compétences",
+    "projects": "Projets",
     "welcome": "Hey, bienvenue sur mon portfolio",
     "projetBtn" : "PROJETS",
     "aboutMe" : "À propos", 

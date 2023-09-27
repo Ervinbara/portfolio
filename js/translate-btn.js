@@ -31,6 +31,14 @@ function changeLanguage(lang) {
     document.getElementById("projet-btn-link").textContent = langData.projetBtn;
     document.getElementById("home-link").textContent = langData.home;
     document.getElementById("about-link").textContent = langData.about;
+    const homeElements = document.querySelectorAll(".home-link");
+    homeElements.forEach(element => {
+        element.textContent = langData.home;
+      });
+    const aboutElements = document.querySelectorAll(".about-link");
+    aboutElements.forEach(element => {
+        element.textContent = langData.about;
+      });
     const timelineElements = document.querySelectorAll(".timeline-link");
     timelineElements.forEach(element => {
         element.textContent = langData.timeline;

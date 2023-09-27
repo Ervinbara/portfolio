@@ -38,11 +38,11 @@
 }
 
 h1.day-mode-text {
-    color: var(--text-color1); /* Couleur du texte en mode jour (noir dans cet exemple) */
+    color: var(--text-color1);
 }
 
 h2.day-mode-text {
-    color: var(--text-color1); /* Couleur du texte en mode jour (noir dans cet exemple) */
+    color: var(--text-color1); 
 }
 
 p.day-mode-text {

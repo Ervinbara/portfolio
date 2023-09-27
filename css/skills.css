@@ -19,7 +19,6 @@
   
   .skills .icon {
     width: 11.875rem;
-    /* height: 11.25rem; */
   }
 
 
@@ -256,7 +255,6 @@
   border: none;
   border-radius: 100px;
   padding: 5px 30px;
-  /* color: #fff; */
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -282,7 +280,7 @@
 .progress-percent {
   position: absolute;
   top: -105%;
-  left: 96%; /* Vous pouvez ajuster cette valeur si nécessaire */
+  left: 96%;
   transform: translate(-50%, -50%);
   font-weight: bold;
   color: #595959;

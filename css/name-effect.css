@@ -27,13 +27,10 @@
 
 }
 
-
-/*Name effect*/
-
 /*Name effect*/
 .waviy {
   position: relative;
-  font-size: 17px; /* Ajustez la taille de police selon vos préférences */
+  font-size: 17px;
 }
 .waviy span {
   letter-spacing: -3px;
@@ -57,7 +54,3 @@
     display: none;
   }
 }
-
-/* .name-mobile{
-  display: none;
-} */

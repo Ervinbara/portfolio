@@ -3,8 +3,8 @@
 .footer {
     position: relative;
     z-index: 2;
-    color: #fff; /* Couleur du texte */
-    text-align: center; /* Centrer le contenu */
+    color: #fff;
+    text-align: center;
     top: 200px;
     padding-top: 20px;
   }
