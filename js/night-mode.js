@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('li.fa.night-mode-text'),
         document.querySelector('i.bx.night-mode-text'),
         document.querySelector('.menu.night-mode-text'),
+        document.querySelector('.hov.night-mode-text'),
+        document.querySelector('.nav-links.night-mode-text.main'),
         // document.querySelector('.more-btn.night-mode-text'),
         // document.querySelectorAll(''),
         // Ajoutez d'autres sélecteurs au besoin

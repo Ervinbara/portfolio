@@ -344,12 +344,10 @@ nav .nav-bar .logo a{
     list-style-type:none;
     text-decoration: none;
     
-    background: rgb(198, 198, 198);
+    background: #FAEBD7;
     width:112px;
     padding: 0 5px;
-    /* border: 1px solid black; */
     height: 30px;
-
     line-height: 30px;
     
     -webkit-transition: all .5s ease-in-out;
@@ -359,6 +357,22 @@ nav .nav-bar .logo a{
     text-decoration: none;
     color: #000;
   }
+  .main li a:hover{
+    color: #FAEBD7;
+  }
+  .main li:hover{
+    background: #47526f;
+  }
+
+.nav-links.main li {
+  position: relative;
+}
+
+/* Style pour le texte lors du survol */
+.nav-links.main li:hover a {
+  color: #FAEBD7; /* Couleur du texte lors du survol */
+}
+
   
   .main li:nth-child(odd){
     

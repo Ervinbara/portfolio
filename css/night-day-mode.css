@@ -126,6 +126,21 @@ i.bx.day-mode-text::before{
     color: #092756;
 }
 
+.hov.day-mode-text{
+    background: #ab6f5f;
+}
+
+/* .nav-links.day-mode-text.main li:hover a{
+    background: #693b31;
+} */
+.nav-links.day-mode-text.main li:hover{
+    background: #ab6f5f;
+}
+
+.nav-links.day-mode-text.main li:hover a {
+    color: #FAEBD7; /* Couleur du texte lors du survol */
+  }
+
 @media (max-width: 790px){
 
     .menu.day-mode-text{
