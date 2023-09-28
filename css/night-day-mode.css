@@ -151,21 +151,21 @@ i.bx.day-mode-text::before{
 /******************/
 
 
-.darkLight{
+/* .darkLight{
     position: relative;
     top: 6px;
 
 }
 .darkLight .hidden {
     display: none;
-}
+} */
 
 /* Style du toggle switch */
-.toggle-checkbox {
+/* .toggle-checkbox {
     display: none;
-  }
+  } */
   
-  .toggle-label {
+  /* .toggle-label {
     background-color: #ccc;
     border-radius: 20px;
     display: inline-block;
@@ -174,9 +174,9 @@ i.bx.day-mode-text::before{
     width: 50px;
     cursor: pointer;
 
-  }
+  } */
   
-  .toggle-label::before {
+  /* .toggle-label::before {
     background-color: #fff;
     border-radius: 50%;
     content: "";
@@ -186,15 +186,100 @@ i.bx.day-mode-text::before{
     top: 2px;
     width: 21px;
     transition: 0.3s;
-  }
+  } */
   
-  .toggle-checkbox:checked + .toggle-label {
-    background-color: #092756; /* Couleur du fond en mode nuit */
-  }
+  /* .toggle-checkbox:checked + .toggle-label {
+    background-color: #092756;
+  } */
   
-  .toggle-checkbox:checked + .toggle-label::before {
+  /* .toggle-checkbox:checked + .toggle-label::before {
     left: calc(100% - 2px);
     transform: translateX(-100%);
-    background-color: #df9e85; /* Couleur de la boule en mode jour */
+    background-color: #df9e85; 
+  }
+   */
+
+
+  /*Mode nuit test*/
+  .toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .toggle-slot {
+    position: relative;
+    height: 30px;
+    width: 65px;
+    border: 5px solid #e4e7ec;
+    border-radius: 10em;
+    background-color: white;
+    box-shadow: 0px 10px 25px #e4e7ec;
+    transition: background-color 250ms;
+    top: 5px;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+  }
+  
+  .toggle-button {
+    transform: translate(25px, 4px); /* Ajusté pour correspondre à votre bouton actuel */
+    position: absolute;
+    height: 16px; /* Ajusté pour correspondre à votre bouton actuel */
+    width: 16px; /* Ajusté pour correspondre à votre bouton actuel */
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+    right: 29px;
+    top: -1px;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.75em white;
+    transform: translate(-8px, 3px);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    top: -2px;
+    right: 13px;
+    color: #ffbb52;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 1.6em; /* Ajusté pour correspondre à votre bouton actuel */
+    width: 1.6em; /* Ajusté pour correspondre à votre bouton actuel */
+    opacity: 1;
+    transform: translate(0.4em, 0.4em) rotate(15deg); /* Ajusté pour correspondre à votre bouton actuel */
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(0.8em, 0.4em) rotate(0deg); /* Ajusté pour correspondre à votre bouton actuel */
+  }
+  
+  .moon-icon {
+    position: absolute;
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    opacity: 0;
+    transform: translate(2.3em, 0.1em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
   }
   

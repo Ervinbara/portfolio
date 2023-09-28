@@ -45,4 +45,6 @@
 
 .fonction{
     display: flex;
+    position: relative;
+    right: 12px;
 }

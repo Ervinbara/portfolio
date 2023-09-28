@@ -53,13 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.menu.night-mode-text'),
         document.querySelector('.hov.night-mode-text'),
         document.querySelector('.nav-links.night-mode-text.main'),
-        // document.querySelector('.more-btn.night-mode-text'),
-        // document.querySelectorAll(''),
-        // Ajoutez d'autres sélecteurs au besoin
     ];
 
     toggleCheckbox.addEventListener('change', function() {
-        if (this.checked) {
+        if (!this.checked) {
             // Mode jour
             socialBackground.classList.remove('night-mode');
             socialBackground.classList.add('day-mode');

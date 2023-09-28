@@ -344,7 +344,7 @@ nav .nav-bar .logo a{
     list-style-type:none;
     text-decoration: none;
     
-    background: #FAEBD7;
+    background: #47526f;
     width:112px;
     padding: 0 5px;
     height: 30px;
@@ -355,13 +355,13 @@ nav .nav-bar .logo a{
   }
   .main li a{
     text-decoration: none;
-    color: #000;
+    color: #FAEBD7;
   }
   .main li a:hover{
     color: #FAEBD7;
   }
   .main li:hover{
-    background: #47526f;
+    background: transparent;
   }
 
 .nav-links.main li {
