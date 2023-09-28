@@ -130,9 +130,12 @@ i.bx.day-mode-text::before{
     background: #ab6f5f;
 }
 
-/* .nav-links.day-mode-text.main li:hover a{
+.nav-links.day-mode-text.main li{
     background: #693b31;
-} */
+}
+.nav-links.day-mode-text.main li a{
+    color: #FAEBD7;
+}
 .nav-links.day-mode-text.main li:hover{
     background: #ab6f5f;
 }
