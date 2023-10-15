@@ -23,6 +23,18 @@ function ajusterStyleProjets() {
 document.addEventListener('DOMContentLoaded', function() {
     const projets = [
         { 
+            categorie: ['symfony', 'all'],
+            image: 'images/projets/eCommerce.jpg', 
+            website:'', 
+            github:'https://github.com/Ervinbara/eCommerce', 
+            titre:'Site eCommerce', 
+            langages: ['PHP', 'MySQL', 'Symfony','Stripe'], 
+            description: 'Site de vente de vêtements', 
+            descriptionTrad: 'Clothing sales website',
+            about: 'Ce projet est un site eCommerce construit avec Symfony. Il reproduit les fonctionnalités typiques d\'une plateforme de vente en ligne, comprenant des actions telles que l\'ajout de produits au panier, la création de comptes utilisateurs, et la possibilité de finaliser des achats en utilisant Stripe comme moyen de paiement',
+            aboutTrad: 'This project is an eCommerce website built on Symfony. It replicates the typical functionalities of an online sales platform, including actions such as adding products to the cart, creating user accounts, and the ability to complete purchases using Stripe as a payment method.'
+        },
+        { 
             categorie: ['html-css-js', 'all'],
             image: 'images/projets/bitcoin.jpg', 
             website:'http://convertisseur-crypto.com/', 
@@ -179,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Liste des chemins d'images à précharger
     const imagesToPreload = [
+        'images/projets/eCommerce.jpg',
         'images/projets/bitcoin.jpg',
         'images/projets/keyomo.jpg',
         'images/projets/todo.jpg',
@@ -191,8 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/projets/snowboard.jpg',
         'images/projets/p7.jpg',
         'images/projets/dojo.jpg',
-        'images/projets/webagency.jpg',
-        // Ajoutez d'autres chemins d'images si nécessaire
     ];
 
     // Préchargez les images
@@ -217,16 +228,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="langages">
                         ${projet.langages.map(langage => `<span>${langage}</span>`).join('')}
                     </div>
-                    <button class="more-btn">+</button>
+                    <button class="more-btn night-mode-text">+</button>
                 </div>
             `;
 
             projetsListe.appendChild(projetElement);
 
             // Ajout de la classe 'show' après un court délai pour déclencher l'effet d'apparition
-            setTimeout(() => {
-                projetElement.classList.add('show');
-            }, 80);
+            // setTimeout(() => {
+            //     projetElement.classList.add('show');
+            // }, 80);
         });
         setTimeout(ajusterStyleProjets, 100);
     }

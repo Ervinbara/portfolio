@@ -52,7 +52,7 @@ function changeLanguage(lang) {
         element.textContent = langData.projects;
     });
   }
-  
+
   // Fonction pour basculer l'affichage du menu des options de langues
 function toggleLanguageOptions() {
     const languageOptions = document.getElementById("language-options");
